@@ -1,7 +1,7 @@
-    #78. Subsets#
-    **Medium**
+    78. Subsets
+    Medium
 
-    >Given a set of distinct integers, nums, return all possible subsets (the power set).
+    Given a set of distinct integers, nums, return all possible subsets (the power set).
 
     Note: The solution set must not contain duplicate subsets.
 
