@@ -14,13 +14,13 @@ Input: [3,2,1,6,0,5]
 
 Output: return the tree root node representing the following tree:
 
-      6
-    /   \
-   3     5
-    \    /
-     2  0   
-       \
-        1
+       6
+     /   \
+    3     5
+     \    /
+      2  0   
+        \
+         1
         
 Note:
 
