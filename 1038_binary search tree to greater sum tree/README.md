@@ -1,5 +1,6 @@
-1038. Binary Search Tree to Greater Sum Tree
-======================
+1038.Binary Search Tree to Greater Sum Tree
+=======================
+
 *Medium*
 ----------------------
 
