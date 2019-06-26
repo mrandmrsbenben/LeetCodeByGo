@@ -12,15 +12,15 @@ After making any number of moves, every row of this matrix is interpreted as a b
 Return the highest possible score.
 
 **Example 1:**
-  Input: [[0,0,1,1],[1,0,1,0],[1,1,0,0]]
-  Output: 39
-  Explanation:
-  Toggled to [[1,1,1,1],[1,0,0,1],[1,1,1,1]].
-  0b1111 + 0b1001 + 0b1111 = 15 + 9 + 15 = 39
 
+
+    Input: [[0,0,1,1],[1,0,1,0],[1,1,0,0]]
+    Output: 39
+    Explanation:
+    Toggled to [[1,1,1,1],[1,0,0,1],[1,1,1,1]].
+    0b1111 + 0b1001 + 0b1111 = 15 + 9 + 15 = 39
 
 **Note:**
-
 1. 1 <= A.length <= 20
 2. 1 <= A[0].length <= 20
 3. A[i][j] is 0 or 1.
