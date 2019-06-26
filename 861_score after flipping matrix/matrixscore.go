@@ -41,7 +41,7 @@ func matrixScore(A [][]int) int {
 				cnt++
 			}
 		}
-		if cnt >= (len(A)+1)/2 {
+		if cnt >= len(A)-cnt {
 			sum += cnt * base
 		} else {
 			sum += (len(A) - cnt) * base
