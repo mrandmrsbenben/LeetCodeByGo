@@ -30,8 +30,5 @@ func grayCode(n int) []int {
 		n--
 		bit *= 2
 	}
-	for _, n := range ns {
-		fmt.Printf("%03b\n", n)
-	}
 	return ns
 }
