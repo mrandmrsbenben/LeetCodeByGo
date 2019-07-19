@@ -16,14 +16,21 @@ func reverseList(head *ListNode) *ListNode {
 	if head == nil || head.Next == nil {
 		return head
 	}
-	var root, prev *ListNode
-	prev = &ListNode{head.Val, nil}
-	for head.Next != nil {
-		// vals = append(vals, head.Next.Val)
-		// head = head.Next
-		root = &ListNode{head.Next.Val, prev}
-		prev = root
-		head = head.Next
+	node := reverseList(head.Next)
+	head.Next.Next, head.Next = head, nil
+	return node
+}
+
+func reverseListV1(head *ListNode) *ListNode {
+	if head == nil || head.Next == nil {
+		return head
 	}
-	return root
+	var prev, cur, next *ListNode
+	cur = head
+	for cur != nil {
+		next = cur.Next
+		cur.Next, prev = prev, cur
+		cur = next
+	}
+	return prev
 }
