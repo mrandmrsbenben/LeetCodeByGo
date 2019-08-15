@@ -18,7 +18,7 @@ Given a matrix of M x N elements (M rows, N columns), return all elements of the
     Output:  [1,2,4,7,5,3,6,8,9]
 
     Explanation:
-    ![](https://assets.leetcode.com/uploads/2018/10/12/diagonal_traverse.png)
+![](https://assets.leetcode.com/uploads/2018/10/12/diagonal_traverse.png)
 
 **Note:**
 
