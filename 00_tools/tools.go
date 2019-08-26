@@ -7,6 +7,7 @@ import (
 	"github.com/atotto/clipboard"
 )
 
+//[LeetCodeByGo: 更多LeetCode题库Go语言题解](https://github.com/mrandmrsbenben/LeetCodeByGo)
 func main() {
 	text, err := clipboard.ReadAll()
 	if err == nil {
