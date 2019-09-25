@@ -16,7 +16,7 @@ Return the shortest distance between the given start and destination stops.
     Output: 1
     Explanation: Distance between 0 and 1 is 1 or 9, minimum is 1.
 
-    ![](https://assets.leetcode.com/uploads/2019/09/03/untitled-diagram-1.jpg)
+   ![](https://assets.leetcode.com/uploads/2019/09/03/untitled-diagram-1.jpg)
 
 **Example 2:**
 
@@ -24,7 +24,7 @@ Return the shortest distance between the given start and destination stops.
     Output: 3
     Explanation: Distance between 0 and 2 is 3 or 7, minimum is 3.
 
-    ![](https://assets.leetcode.com/uploads/2019/09/03/untitled-diagram-1-1.jpg)
+   ![](https://assets.leetcode.com/uploads/2019/09/03/untitled-diagram-1-1.jpg)
 
 **Example 3:**
 
@@ -32,7 +32,7 @@ Return the shortest distance between the given start and destination stops.
     Output: 4
     Explanation: Distance between 0 and 3 is 6 or 4, minimum is 4.
 
-    ![](https://assets.leetcode.com/uploads/2019/09/03/untitled-diagram-1-2.jpg)
+   ![](https://assets.leetcode.com/uploads/2019/09/03/untitled-diagram-1-2.jpg)
  
 **Constraints:**
 
