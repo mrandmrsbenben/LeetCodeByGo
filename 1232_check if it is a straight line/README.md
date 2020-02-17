@@ -8,18 +8,18 @@ You are given an array coordinates, coordinates[i] = [x, y], where [x, y] repres
 
 **Example 1:**
 
-    ![](https://assets.leetcode.com/uploads/2019/10/15/untitled-diagram-2.jpg)
-
     Input: coordinates = [[1,2],[2,3],[3,4],[4,5],[5,6],[6,7]]
     Output: true
 
-**Example 2:**
+   ![](https://assets.leetcode.com/uploads/2019/10/15/untitled-diagram-2.jpg)
 
-    ![](https://assets.leetcode.com/uploads/2019/10/09/untitled-diagram-1.jpg)
+**Example 2:**
 
     Input: coordinates = [[1,1],[2,2],[3,4],[4,5],[5,6],[7,7]]
     Output: false
- 
+
+   ![](https://assets.leetcode.com/uploads/2019/10/09/untitled-diagram-1.jpg)
+
 **Constraints:**
 
 * 2 <= coordinates.length <= 1000
