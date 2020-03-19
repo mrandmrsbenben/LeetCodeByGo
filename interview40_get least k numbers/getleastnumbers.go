@@ -16,5 +16,5 @@ func main() {
 //内存消耗 :6.3 MB, 在所有 Go 提交中击败了100.00%的用户
 func getLeastNumbers(arr []int, k int) []int {
 	sort.Ints(arr)
-	return arr
+	return arr[0:k]
 }
