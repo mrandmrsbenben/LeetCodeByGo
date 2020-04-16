@@ -17,6 +17,58 @@ func main() {
 	fmt.Println("Output:", updateMatrix(matrix))
 }
 
+//执行用时 :64 ms, 在所有 Go 提交中击败了91.25%的用户
+//内存消耗 :7.3 MB, 在所有 Go 提交中击败了100.00%的用户
+func updateMatrix(matrix [][]int) [][]int {
+	data := [][2]int{}
+	lr, lc := len(matrix), len(matrix[0])
+	res := make([][]int, lr)
+	for i := range matrix {
+		res[i] = make([]int, lc)
+		for j := range matrix[i] {
+			if matrix[i][j] == 0 {
+				data = append(data, [2]int{i, j})
+			} else {
+				res[i][j] = -1
+			}
+		}
+	}
+
+	var buf [][2]int
+	distance := 1
+	var x, y int
+	for len(data) > 0 {
+		buf = [][2]int{}
+		for i := range data {
+			x, y = data[i][1], data[i][0]
+			// up
+			if y > 0 && res[y-1][x] == -1 {
+				res[y-1][x] = distance
+				buf = append(buf, [2]int{y - 1, x})
+			}
+			// down
+			if y < lr-1 && res[y+1][x] == -1 {
+				res[y+1][x] = distance
+				buf = append(buf, [2]int{y + 1, x})
+			}
+			// left
+			if x > 0 && res[y][x-1] == -1 {
+				res[y][x-1] = distance
+				buf = append(buf, [2]int{y, x - 1})
+			}
+			// right
+			if x < lc-1 && res[y][x+1] == -1 {
+				res[y][x+1] = distance
+				buf = append(buf, [2]int{y, x + 1})
+			}
+		}
+		distance++
+		data = make([][2]int, len(buf))
+		copy(data, buf)
+	}
+	return res
+}
+
 //Point Array Point
 type Point struct {
 	x int
@@ -29,7 +81,7 @@ func (p *Point) String() string {
 
 //执行用时 :408 ms, 在所有 Go 提交中击败了73.17%的用户
 //内存消耗 :138.1 MB, 在所有 Go 提交中击败了12.50%的用户
-func updateMatrix(matrix [][]int) [][]int {
+func updateMatrixV1(matrix [][]int) [][]int {
 	if len(matrix) == 0 {
 		return matrix
 	}
