@@ -36,6 +36,40 @@ func (t *TreeNode) String() string {
 
 type NodeList []TreeNode
 
+func MakeTree2(vals []int) *TreeNode {
+	if len(vals) == 0 {
+		return nil
+	}
+
+	root := &TreeNode{vals[0], nil, nil}
+	nodes := []*TreeNode{root}
+	var buf []*TreeNode
+	var node *TreeNode
+	i := 1
+	for len(nodes) > 0 && i < len(vals) {
+		buf = make([]*TreeNode, 0)
+		for j := range nodes {
+			// Left Leaf Node
+			if i < len(vals) && vals[i] != -1 {
+				node = &TreeNode{vals[i], nil, nil}
+				nodes[j].Left = node
+				buf = append(buf, node)
+			}
+			i++
+			// Right Leaf Node
+			if i < len(vals) && vals[i] != -1 {
+				node = &TreeNode{vals[i], nil, nil}
+				nodes[j].Right = node
+				buf = append(buf, node)
+			}
+			i++
+		}
+		nodes = make([]*TreeNode, len(buf))
+		copy(nodes, buf)
+	}
+
+	return root
+}
 func MakeTree(vals []int) *TreeNode {
 	if len(vals) == 0 {
 		return nil
