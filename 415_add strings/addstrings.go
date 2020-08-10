@@ -14,6 +14,34 @@ func main() {
 }
 
 func addStrings(num1 string, num2 string) string {
+	sa := []string{"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"}
+	if len(num1) < len(num2) {
+		num1, num2 = num2, num1
+	}
+
+	sum := ""
+	addup, bitsum := 0, 0
+	var n1, n2 int
+	j := len(num2) - 1
+	for i := len(num1) - 1; i >= 0; i-- {
+		if j >= 0 {
+			n1, n2 = int(num1[i]-'0'), int(num2[j]-'0')
+			j = j - 1
+		} else {
+			n1, n2 = int(num1[i]-'0'), 0
+		}
+		bitsum = n1 + n2 + addup
+		addup = bitsum / 10
+		sum = sa[bitsum%10] + sum
+	}
+	for addup > 0 {
+		sum = sa[addup%10] + sum
+		addup = addup / 10
+	}
+	return sum
+}
+
+func addStringsV0(num1 string, num2 string) string {
 	im := map[string]int{"0": 0, "1": 1, "2": 2, "3": 3, "4": 4,
 		"5": 5, "6": 6, "7": 7, "8": 8, "9": 9}
 	sa := []string{"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"}
@@ -43,7 +71,7 @@ func addStrings(num1 string, num2 string) string {
 			sum = append(sum, sa[bitsum%10])
 		}
 	}
-	for {
+	for addup > 0 {
 		if addup == 0 {
 			break
 		}
